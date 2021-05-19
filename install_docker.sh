@@ -20,3 +20,9 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 
+# virtual memory
+sudo dd if=/dev/zero of=swapfile bs=1024 count=1024000
+mkswap swapfile
+swapon swapfile
+
+
